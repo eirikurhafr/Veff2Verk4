@@ -10,24 +10,27 @@ const NavigationBar = ({ logoImageUrl }) => {
             <div className="nav-logo">
                 <img src={logoImageUrl} alt="" />
             </div>
+            <div className="ad">
+                <img src="https://media0.giphy.com/media/l3q2Dh5BA4zRFSwak/source.gif" width="100%" height="100%" alt=""/>
+            </div>
             <NavigationBarLinkWrapper>
                 <NavLink
                     exact
                     to="/pizzas"
                     activeClassName="active"
-                    className="nav-link">{nav.menu}</NavLink>
+                    className="nav-link">Menu</NavLink>
                 <NavLink
                     to="/offers"
                     activeClassName="active"
-                    className="nav-link">{nav.signup}</NavLink>
+                    className="nav-link">Offers</NavLink>
                 <NavLink
                     to="/cart"
                     activeClassName="active"
-                    className="nav-link">{nav.changeProfile}</NavLink>
+                    className="nav-link">Cart</NavLink>
                 <NavLink
                     to="/about"
                     activeClassName="active"
-                    className="nav-link">{nav.about}</NavLink>
+                    className="nav-link">About</NavLink>
             </NavigationBarLinkWrapper>
         </nav>
     );

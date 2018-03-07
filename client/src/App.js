@@ -7,6 +7,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import reducers from './reducers/reducers';
 import Menu from './components/Menu/Menu';
 import Offers from './components/Offers/Offers';
+import Cart from './components/Cart/Cart';
+import About from './components/About/About';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -15,16 +17,16 @@ class App extends React.Component {
         return (
             <MuiThemeProvider>
                 <div>
-                    <NavigationBar logoImageUrl="https://png.pngtree.com/element_pic/00/16/07/125784ca9d35135.jpg" />
+                    <NavigationBar logoImageUrl="https://i.imgur.com/51sJROo.jpg" />
                     <div className="container">
                         <Switch>
-                            <Route path="/pizzas" component={Menu} />
+                            <Route exact path="/pizzas" component={Menu} />
                             <Route path="/offers" component={Offers} />
                             <Route path="/cart" component={Cart} />
                             <Route path="/about" component={About} />
+                            <Route exact path="/" component={Menu} />
                         </Switch>
                     </div>
-                    <Footer />
                 </div>
             </MuiThemeProvider>
         );

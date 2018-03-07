@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getAllPizzas } from '../../actions/pizzaActions';
 
 class About extends React.Component {
     render() {
@@ -13,4 +12,4 @@ class About extends React.Component {
 
 };
 
-export default connect(mapStateToProps)(About);
+export default connect()(About);
