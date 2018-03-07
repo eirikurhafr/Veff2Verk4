@@ -42,4 +42,4 @@ NavigationBar.propTypes = {
 };
 
 // Fix for react-router-dom, known bug with NavLink
-export default connect(({ language }) => { return { language }; }, null, null, { pure: false })(NavigationBar);
+export default connect(({  }) => { return {  }; }, null, null, { pure: false })(NavigationBar);
