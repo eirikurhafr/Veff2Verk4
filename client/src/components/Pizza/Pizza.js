@@ -8,6 +8,7 @@ const Pizza = ({ pizza }) => {
             <div className="pizza-image">
                 <img src={image} alt=""/>
             </div>
+            
             <div className="pizza-name">{name}</div>
             <div className="pizza-description">{description}</div>
             <div className="pizza-price">{price}</div>

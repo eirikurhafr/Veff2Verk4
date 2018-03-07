@@ -1,26 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Pizza from '../Pizza/Pizza';
-import { getAllPizzas } from '../../actions/pizzaActions';
+import Offer from '../Offer/Offer';
+import { getAllOffers } from '../../actions/offerActions';
 
 class Offers extends React.Component {
     componentDidMount() {
-        const { getAllPizzas } = this.props;
-        getAllPizzas();
+        const { getAllOffers } = this.props;
+        getAllOffers();
     }
     render() {
-        const { pizza } = this.props;
+        const { offers } = this.props;
         return (
             <div className="container">
-                {pizza.map(p => <Pizza key={p.id} pizza={p} />)}
+                {offers.map(p => <Offer key={p.id} offers={p} />)}
             </div>
         )
     }
-
 };
 
-const mapStateToProps = ({pizza}) => {
-    return { pizza }
+const mapStateToProps = ({offers}) => {
+    return { offers }
 }
 
-export default connect(mapStateToProps, { getAllPizzas })(Offers);
+export default connect(mapStateToProps, { getAllOffers })(Offers);
