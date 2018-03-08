@@ -10,7 +10,7 @@ const Pizza = ({ pizza }) => {
                 <img src={image} alt=""/>
             </div>
             <div className="pizza-name">{name}</div>
-            <Link to={`/pizza/${id}`}>
+            <Link to={`/pizzas/${id}`}>
                 <button className="detailsBtn">Details</button>
             </Link>
         </div>
@@ -20,7 +20,9 @@ const Pizza = ({ pizza }) => {
 Pizza.propTypes = {
     pizza: PropTypes.shape({
         name: PropTypes.string,
-        image: PropTypes.string
+        image: PropTypes.string,
+        description: PropTypes.string,
+        price: PropTypes.number
     })
 };
 

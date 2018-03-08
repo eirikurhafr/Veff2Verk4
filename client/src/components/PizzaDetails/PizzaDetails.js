@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import DetailedPizza from '../DetailedPizza/DetailedPizza';
 import { getPizza } from '../../actions/pizzaActions';
 
 class PizzaDetails extends React.Component {
     componentDidMount() {
         console.log('got it');
+        const { pizzaId } = this.props.match.params;
+        console.log(pizzaId);
         const { getPizza } = this.props;
-        const { id } = this.props.match.params;
-        getPizza(id);
+        getPizza(pizzaId);
     }
     render() {
         const { pizzaDetails } = this.props;
