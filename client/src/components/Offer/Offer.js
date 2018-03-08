@@ -4,8 +4,8 @@ import { PropTypes } from 'prop-types';
 const Offers = ({ offers }) => {
     const { offer, price, validFor } = offers;
     return (
-        <div className="offer-wrapper">            
-            <div className="offer-offer">{offer}</div>
+        <div className="pizza-wrapper">            
+            <div className="pizza-name">{offer}</div>
             <div className="offer-price">{price}</div>
             <div className="offer-validFor">{validFor}</div>
         </div>
