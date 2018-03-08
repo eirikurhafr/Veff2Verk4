@@ -10,6 +10,7 @@ import Offers from './components/Offers/Offers';
 import Cart from './components/Cart/Cart';
 import About from './components/About/About';
 import NavigationBar from './components/NavigationBar/NavigationBar';
+import PizzaDetails from './components/PizzaDetails/PizzaDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
                             <Route path="/offers" component={Offers} />
                             <Route path="/cart" component={Cart} />
                             <Route path="/about" component={About} />
+                            <Route path="/:id" component={PizzaDetails} />
                             <Route exact path="/" component={Menu} />
                         </Switch>
                     </div>

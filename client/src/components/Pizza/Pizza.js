@@ -1,17 +1,16 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Pizza = ({ pizza }) => {
-    const { name, description, price, image } = pizza;
+    const { id, name, image } = pizza;
     return (
         <div className="pizza-wrapper">
             <div className="pizza-image">
                 <img src={image} alt=""/>
             </div>
-            
             <div className="pizza-name">{name}</div>
-            <div className="pizza-description">{description}</div>
-            <div className="pizza-price">{price}</div>
+            <h3><Link to={`pizzas/${id}`}>Details</Link></h3>
         </div>
     );
 };
@@ -19,8 +18,6 @@ const Pizza = ({ pizza }) => {
 Pizza.propTypes = {
     pizza: PropTypes.shape({
         name: PropTypes.string,
-        description: PropTypes.string,
-        price: PropTypes.number,
         image: PropTypes.string
     })
 };

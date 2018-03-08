@@ -30,7 +30,7 @@ const NavigationBar = ({ logoImageUrl }) => {
                 <NavLink
                     to="/about"
                     activeClassName="active"
-                    className="nav-link">About</NavLink>
+                    className="nav-link">About us</NavLink>
             </NavigationBarLinkWrapper>
         </nav>
     );
