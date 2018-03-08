@@ -1,27 +1,26 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
+import DetailedPizza from '../DetailedPizza/DetailedPizza';
+import { getPizza } from '../../actions/pizzaActions';
 
-const PizzaDetails = ({ pizzaDetails }) => {
-    const { name, description, price, image } = pizzaDetails;
-    return (
-        <div className="pizza-wrapper">
-            <div className="pizza-image">
-                <img src={image} alt=""/>
+class PizzaDetails extends React.Component {
+    componentDidMount() {
+        const { getPizza } = this.props;
+        getPizza();
+    }
+    render() {
+        const { pizzaDetails } = this.props;
+        return (
+            <div className="container">
+                {pizzaDetails.map(p => <DetailedPizza key={p.id} pizzaDetails={p} />)}
             </div>
-            <div className="pizza-name">{name}</div>
-            <div className="pizza-description">{description}</div>
-            <div className="pizza-price">{price}</div>
-        </div>
-    );
+        )
+    }
+
 };
 
-PizzaDetails.propTypes = {
-    pizzaDetails: PropTypes.shape({
-        name: PropTypes.string,
-        description: PropTypes.string,
-        price: PropTypes.number,
-        image: PropTypes.string
-    })
-};
+const mapStateToProps = ({ pizzaDetails }) => {
+    return { pizzaDetails }
+}
 
-export default PizzaDetails;
+export default connect(mapStateToProps, { getPizza })(PizzaDetails);
