@@ -1,8 +1,8 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const DetailedPizza = ({ pizza }) => {
-    const { name, image, description, price } = pizza;
+const DetailedPizza = ({ pizzaDetails }) => {
+    const { name, image, description, price } = pizzaDetails;
     return (
         <div className="pizza-wrapper">
             <div className="pizza-image">

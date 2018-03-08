@@ -22,10 +22,10 @@ class App extends React.Component {
                     <div className="container">
                         <Switch>
                             <Route exact path="/pizzas" component={Menu} />
-                            <Route path="/offers" component={Offers} />
+                            <Route exact path="/offers" component={Offers} />
                             <Route path="/cart" component={Cart} />
                             <Route path="/about" component={About} />
-                            <Route path="pizzas/:id" component={PizzaDetails} />
+                            <Route path="pizzas/:pizzaId" component={PizzaDetails} />
                             <Route exact path="/" component={Menu} />
                         </Switch>
                     </div>

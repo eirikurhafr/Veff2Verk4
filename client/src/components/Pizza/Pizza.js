@@ -10,7 +10,9 @@ const Pizza = ({ pizza }) => {
                 <img src={image} alt=""/>
             </div>
             <div className="pizza-name">{name}</div>
-            <h3><Link to={`pizzas/${id}`}>Details</Link></h3>
+            <Link to={`/pizza/${id}`}>
+                <button className="detailsBtn">Details</button>
+            </Link>
         </div>
     );
 };
